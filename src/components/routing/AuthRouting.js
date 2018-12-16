@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { Container, Segment } from 'semantic-ui-react'
 import Home from '../pages/Home'
 import PropTypes from 'prop-types'
 import TopNavigation from '../navigation/TopNavigation'
@@ -11,6 +12,7 @@ import AccountPage from '../pages/AccountPage'
 const AuthRouting = ({ location }) => (
   <div>
     <TopNavigation />
+
     <Switch>
       <Route path='/' exact location={location} component={Home} />
       <Route location={location} path='/profil' component={ProfilPage} />

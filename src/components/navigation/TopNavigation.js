@@ -10,10 +10,10 @@ import _ from 'lodash'
 // import * as actions from '../../actions/auth'
 
 const TopNavigation = ({ mail, name, logout }) => (
-  <Menu secondary pointing>
+  <Menu secondary pointing attached='top'>
     <Menu.Item active={false}>{mail}</Menu.Item>
     <Menu.Item as={NavLink} to='/'>
-      Dashboard
+      Matcha
     </Menu.Item>
     <Menu.Menu position='right'>
       <Dropdown trigger={<Avatar round name={name} size='50' />}>
