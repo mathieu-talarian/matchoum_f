@@ -1,30 +1,41 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { Container, Segment } from 'semantic-ui-react'
-import Home from '../pages/Home'
 import PropTypes from 'prop-types'
-import TopNavigation from '../navigation/TopNavigation'
+import { Container, Segment } from 'semantic-ui-react'
 
+import TopNavigation from '../navigation/TopNavigation'
+import Home from '../pages/Home'
 import MyRedirect from './MyRedirect'
 import ProfilPage from '../pages/ProfilPage'
 import AccountPage from '../pages/AccountPage'
+import SearchSettingsPage from '../pages/SearchSettingsPage'
 
 const AuthRouting = ({ location }) => (
-  <div>
-    <TopNavigation />
+  <Container>
+    <div>
+      <TopNavigation />
 
-    <Switch>
-      <Route path='/' exact location={location} component={Home} />
-      <Route location={location} path='/profil' component={ProfilPage} />
-      <Route
-        location={location}
-        path='/account'
-        exaxt
-        component={AccountPage}
-      />
-      <Route component={MyRedirect} />
-    </Switch>
-  </div>
+      <Segment attached='bottom'>
+        <Switch>
+          <Route path='/' exact location={location} component={Home} />
+          <Route location={location} path='/profil' component={ProfilPage} />
+          <Route
+            location={location}
+            path='/search_settings'
+            component={SearchSettingsPage}
+            exact
+          />
+          <Route
+            location={location}
+            path='/account'
+            exact
+            component={AccountPage}
+          />
+          <Route component={MyRedirect} />
+        </Switch>
+      </Segment>
+    </div>
+  </Container>
 )
 
 AuthRouting.propTypes = {

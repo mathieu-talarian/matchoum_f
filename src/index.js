@@ -1,16 +1,20 @@
-import { ConnectedRouter } from "connected-react-router";
-import React from "react";
-import { render } from "react-dom";
-import { Provider } from "react-redux";
-import { Route } from "react-router-dom";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
-import store, { history } from "./store";
+import { ConnectedRouter } from 'connected-react-router'
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { Route } from 'react-router-dom'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
+import store, { history } from './store'
 
-import "semantic-ui-css/semantic.min.css";
-import "./index.css";
+import 'semantic-ui-css/semantic.min.css'
+import './index.css'
 
-const target = document.querySelector("#root");
+const target = document.querySelector('#root')
+
+store.dispatch({
+  type: 'POSITION_REQUIRED'
+})
 
 render(
   <Provider store={store}>
@@ -18,10 +22,10 @@ render(
       <Route component={App} />
     </ConnectedRouter>
   </Provider>,
-  target,
-);
+  target
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.unregister()

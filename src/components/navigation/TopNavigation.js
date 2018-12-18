@@ -10,19 +10,22 @@ import _ from 'lodash'
 // import * as actions from '../../actions/auth'
 
 const TopNavigation = ({ mail, name, logout }) => (
-  <Menu secondary pointing attached='top'>
-    <Menu.Item active={false}>{mail}</Menu.Item>
+  <Menu inverted pointing attached='top'>
+    {/* <Menu.Item active={false}>{mail}</Menu.Item> */}
     <Menu.Item as={NavLink} to='/'>
-      Matcha
+            Matcha
     </Menu.Item>
     <Menu.Menu position='right'>
       <Dropdown trigger={<Avatar round name={name} size='50' />}>
         <Dropdown.Menu>
           <Dropdown.Item as={NavLink} to='/profil'>
-            Profil
+                        Profil
+          </Dropdown.Item>
+          <Dropdown.Item as={NavLink} to='/search_settings'>
+                        Parametres de recherche
           </Dropdown.Item>
           <Dropdown.Item as={NavLink} to='/account'>
-            Parametres de votre compte
+                        Parametres de votre compte
           </Dropdown.Item>
           <Divider />
           <Dropdown.Item onClick={() => logout()}>Logout</Dropdown.Item>

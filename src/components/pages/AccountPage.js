@@ -9,7 +9,7 @@ const AccountPage = props => (
     <Container textAlign='center'>
       <Header as='h2' icon>
         <Icon name='key' />
-        Parametres de votre compte
+                Parametres de votre compte
         <Header.Subheader>Gerez votre compte</Header.Subheader>
       </Header>
     </Container>
