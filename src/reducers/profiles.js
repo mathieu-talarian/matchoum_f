@@ -1,4 +1,5 @@
-const faker = require('faker/locale/fr')
+import * as faker from 'faker/locale/fr'
+import { normalize, schema } from 'normalizr'
 
 const createFalseProfiles = () => {
   const orientation = num => {
@@ -28,6 +29,10 @@ const createFalseProfiles = () => {
 }
 
 const initialState = createFalseProfiles()
+
+const prof = new schema.Entity('profile')
+const profile = normalize(initialState, prof)
+console.log(profile)
 
 export default (state = initialState, action = {}) => {
   return state

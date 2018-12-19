@@ -9,6 +9,7 @@ import MyRedirect from './MyRedirect'
 import ProfilPage from '../pages/ProfilPage'
 import AccountPage from '../pages/AccountPage'
 import SearchSettingsPage from '../pages/SearchSettingsPage'
+import LookProfilPage from '../pages/LookProfilPage'
 
 const AuthRouting = ({ location }) => (
   <Container>
@@ -30,6 +31,12 @@ const AuthRouting = ({ location }) => (
             path='/account'
             exact
             component={AccountPage}
+          />
+          <Route
+            location={location}
+            path='/profile/:id'
+            exact
+            component={LookProfilPage}
           />
           <Route component={MyRedirect} />
         </Switch>

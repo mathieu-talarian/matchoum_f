@@ -1,0 +1,100 @@
+$duration: 0.3s;
+$color: #e7e4e4;
+$alice: aliceblue;
+$second: green;
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.my-card {
+  border-radius: 1%;
+  height: 300px;
+  width: 300px;
+  overflow: hidden; //position: absolute;
+  //top: 50%;
+  //left: 50%;
+  //transform: translateX(-50%) translateY(-50%);
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow $duration;
+  margin: 1vh;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.my-card:hover {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+}
+
+.my-card__thumb {
+  height: 300px;
+  width: 300px;
+  transition: all $duration;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  & i {
+    font-size: 300px;
+    color: gainsboro;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity $duration, transform $duration;
+  }
+  .my-card:hover & i {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+  .my-card:hover & {
+    height: 300px - 275px;
+  }
+}
+
+.my-card:hover .my-card__thumb img {
+  opacity: 0.6;
+}
+
+.my-card__body {
+  background-color: #fff;
+  position: relative;
+  padding: 0px;
+  height: 0px;
+  transition: height $duration;
+  .my-card:hover & {
+    height: 0px + 275px;
+  }
+}
+
+.my-card__infos {
+  height: 275px;
+}
+
+.my-card__title {
+  width: 300px;
+  position: absolute;
+  height: 25px;
+  top: -25px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 0 0 0;
+  margin: 0;
+  font-size: 100%;
+  color: #000;
+  font-weight: bold;
+}
+
+.my-card__subcategorie {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.my-card__mails {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}

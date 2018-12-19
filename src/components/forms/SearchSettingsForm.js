@@ -79,13 +79,16 @@ const SearchSettingsForm = ({ localisation }) => {
           />
         </Form.Field>
         <Form.Field>
-          <div>Note minimum</div>
+          <div>Note minimum {values.noteMin} / 10</div>
           <Rating
             icon='star'
             defaultRating={3}
-            value={values.noteMin}
+            rating={values.noteMin}
             maxRating={10}
-            onChange={handleChange}
+            onRate={(e, { rating }) => {
+              setFieldValue('noteMin', rating)
+            }
+            }
           />
         </Form.Field>
         {localisation.success && (

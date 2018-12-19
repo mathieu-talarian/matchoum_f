@@ -8,10 +8,10 @@ const Home = () => (
   <Container>
     <Grid celled columns={2}>
       <Grid.Row>
-        <Grid.Column width={4}>
+        <Grid.Column stretched width={4}>
           <SearchSettingsPage />
         </Grid.Column>
-        <Grid.Column width={8}>
+        <Grid.Column stretched width={12}>
           <SearchResults />
         </Grid.Column>
       </Grid.Row>

@@ -7,12 +7,15 @@
     "@types/react": "^16.7.17",
     "antd": "^3.11.2",
     "axios": "^0.18.0",
+    "color-thief-jimp": "^2.0.2",
     "connected-react-router": "^6.0.0",
+    "dominant-color": "^0.0.1",
     "eslint": "5",
     "faker": "^4.1.0",
     "formik": "^1.4.1",
     "history": "^4.7.2",
     "lodash": "^4.17.11",
+    "normalizr": "^3.3.0",
     "react": "^16.7.0-alpha.2",
     "react-avatar": "^3.4.6",
     "react-dom": "^16.7.0-alpha.2",
@@ -45,6 +48,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@types/normalizr": "^2.0.18",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",
     "eslint-plugin-import": "^2.14.0",
@@ -52,6 +56,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
+    "node-sass": "^4.11.0",
     "polyjuice": "^2.2.4"
   }
 }
